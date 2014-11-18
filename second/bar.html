@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style type="text/css">
+            
+            .graph
+            {
+                display:  table;
+                margin:  100px auto;
+            }
+        </style>
+        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../bower_components/d3/d3.min.js"></script>
+    </head>
+    <body>
+        <section class="graph">
+        </section>
+        <script type="text/javascript">
+
+            function randomArray() {
+                for (i = 0, array = new Array(); i < 10; i++) {
+                    array.push(Math.floor(Math.random() * 10 + 1));
+                }
+
+                return array;
+            }
+
+
+            $(document).ready(function () {
+
+
+                initRandArray = randomArray();
+                var largest = d3.max(initRandArray);
+                var w = 500;
+                var h = 200;
+                var barPadding = 1;
+
+                var yScale = d3.scale.linear()
+                .domain([0, largest])
+                .range([0, h])
+
+                var svg = d3.select("section")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+                svg.selectAll("rect")
+                    .data(initRandArray)
+                    .enter()
+                    .append("rect")
+                    .attr("x", function(d,i) {return i*(w/initRandArray.length)})
+                    .attr("y", function(d) {return h - yScale(d)})
+                    .attr("width", w / initRandArray.length - barPadding)
+                    .attr("height", function(d){return yScale(d)})
+                    .attr("fill", function(d) {
+                    return "rgb(136, 196, " + (d * 100) + ")";
+                });
+
+                svg.selectAll("text")
+                    .data(initRandArray)
+                    .enter()
+                    .append("text")
+                    .text(function(d){return d})
+                    .attr("x", function(d, i){return (i*(w/initRandArray.length) + 20)})
+                    .attr("y", function(d) {return h - yScale(d) + 15})
+                    .attr("font-family", "sans-serif")
+                    .attr("fill", "white")
+
+
+            });
+
+
+        </script>
+    </body>
+</html>

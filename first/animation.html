@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style type="text/css">
+        
+            section#stage
+            {
+                position: relative;
+                width: 750px;
+                height:  500px;
+                margin:  20px;
+                border:  1px solid #666;
+            }
+            
+            @keyframes movement
+            {
+                0% {
+                    top: 0px;
+                    left: 0px;
+                }
+                25% {
+                    top: 0px;
+                    left: 90%;
+                }
+                50% {
+                    top: 90%;
+                    left: 90%;
+                }
+                75% {
+                    top: 90%;
+                    left: 0px;
+                }
+                100% {
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+            
+            figure#ball
+            {
+                position: absolute;
+                background-color: green;
+                border-radius: 50%;
+                height:  50px;
+                width: 50px;
+                box-shadow: inset -25px -25px 40px rgba(0,0,0,0.5);
+                animation: movement 5s infinite;
+            }
+            
+            section:hover figure#ball
+            {
+                animation-play-state: paused;
+            }
+        
+        
+        
+        </style>
+
+
+    </head>
+    <body>
+        <section id="stage">
+        
+            <figure id="ball"></figure>
+        
+        </section>
+        
+    </body>
+</html>

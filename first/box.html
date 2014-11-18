@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+        <style type="text/css">
+
+            section
+            {
+                position: relative;
+                height:  800px;
+                width:  400px;
+                z-index:  1;
+                perspective: 1500px;
+                perspective-origin: 25px 50px;
+            }   
+            
+            div, div img
+            {
+                width:  500px;
+                height:  250px;
+                margin:  0;
+            }
+            
+            div.card
+            {
+                margin:  200px 0 0 200px !important; 
+                transition: transform 1s linear 0s;
+                transform-style: preserve-3d;
+            }
+            
+            section:hover div.card
+            {
+                transform:  rotateY(180deg);
+            }
+            
+            div.face
+            {
+                position:  absolute;
+                backface-visibility: hidden;
+            }
+            
+            div.back
+            {
+                background-color: green;
+                color:  red;
+                transform: rotateY(180deg);
+            }
+            
+            div.back h3
+            {
+                font-size:  30px;
+                text-align:  center;
+            }
+            
+            
+            
+        </style>
+
+
+
+    </head>
+    <body>
+        <section>
+        
+            <div class="card">
+            
+                <div class="face front">
+                    <img src="../images/copyright.png" alt="Manning" />
+                </div>
+                <div class="face back">
+                    <h3>Papa's in the house&reg;</h3>
+                </div>            
+            
+            
+            </div>
+        
+        
+        
+        
+        </section>
+    </body>
+</html>

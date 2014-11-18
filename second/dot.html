@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style type="text/css">
+            
+            #dotplot-example {
+  width: 80%;
+  padding: 60px 80px 60px 140px;
+  color: #444444;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+#dotplot-example h3 {
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+#dotplot-example chart {
+  width: 100%;
+  height: 500px;
+}
+#dotplot-example guide-x {
+  top: -50px;
+}
+#dotplot-example datum:after {
+  content: "";
+  border-bottom: 1px dashed #aaaaaa;
+  width: 100%;
+  display: block;
+}
+#dotplot-example dot {
+  background-color: #7dac9f;
+}
+#dotplot-example annotation {
+  font-size: 12px;
+  font-weight: normal;
+  left: -6px;
+}
+            
+        </style>
+    </head>
+    <body>
+        <script src="http://variancecharts.com/cdn/variance-noncommercial-standalone-bbae39c.min.js" charset="UTF-8"></script>
+
+<link id="employment-shares" rel="variance-data" href="https://variancecharts.com/data/employment_shares.csv">
+
+<div id="dotplot-example">
+
+  <h3>% of Women Who Are Senior Managers, 2008</h3>
+
+  <chart data="#employment-shares"
+         scale-x-linear="0 20">
+    <guide-x class="top"></guide-x>
+    <repeat>
+      <dot map-position="women"></dot>
+      <annotation class="left">
+        {{country}}
+      </annotation>
+    </repeat>
+  </chart>
+
+</div>
+    </body>
+</html>

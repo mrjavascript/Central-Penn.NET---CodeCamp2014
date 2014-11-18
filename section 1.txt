@@ -1,0 +1,43 @@
+CUBIC BEZIER:
+
+http://matthewlein.com/ceaser/
+
+http://cubic-bezier.com/#.17,.67,.83,.67
+
+ease	Default value. Specifies a transition effect with a slow start, then fast, then end slowly (equivalent to cubic-bezier(0.25,0.1,0.25,1))
+linear	Specifies a transition effect with the same speed from start to end (equivalent to cubic-bezier(0,0,1,1))
+ease-in	Specifies a transition effect with a slow start (equivalent to cubic-bezier(0.42,0,1,1))
+ease-out	Specifies a transition effect with a slow end (equivalent to cubic-bezier(0,0,0.58,1))
+ease-in-out	Specifies a transition effect with a slow start and end (equivalent to cubic-bezier(0.42,0,0.58,1))
+
+------------------------------------------------------------------------------------------------------------------------
+
+TRANSFORM:
+
+- rotate
+- skew
+- scale
+- translate
+- matrix 
+
+http://www.useragentman.com/IETransformsTranslator/
+
+-------------------------------------------------------------------------------------------------------------------------
+
+FILTERS:
+
+Where is one of:
+
+blur()
+brightness()
+contrast()
+url()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+sepia()
+custom() - "coming soon"
+
+http://html5-demos.appspot.com/static/css/filters/index.html

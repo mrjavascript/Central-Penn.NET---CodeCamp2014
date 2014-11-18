@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style type="text/css">
+            
+            div
+            {
+                width:  250px;
+                height: 250px;
+                color:  #fff;
+                font-size: 18px;
+                font-weight: bold;
+                /*
+                transition: background-color 1s linear 0s, height 1s ease-in 0s, width 2s ease-out 0s;
+                */
+                transition: all 2s cubic-bezier(0.055, 0.935, 0.950, 0.065) 0s;
+            }
+            
+            div#one
+            {
+                
+                background-color: blue;
+            }
+            
+            div#one:hover
+            {
+                background-color: DarkOrange ;  
+                    width: 500px;
+                    font-size:  42px;
+                    color: purple;
+            }
+            
+            div#two
+            {
+                background-color: red;
+                
+            }
+            
+            div#two:hover
+            {
+                background-color:  Gold;
+                height:  500px;  
+                font-size:  6px;
+                color:  blue; 
+            }
+            
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="one">Welcome To</div>
+
+        <div id="two">Code Camp 2014</div>
+
+    </body>
+</html>
